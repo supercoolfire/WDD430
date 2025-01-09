@@ -1,0 +1,4 @@
+1. DOM represents all the visible and non visible elements on the page.
+2. Imperative is the how to do things step by step and controlling the flow while Declarative programming focues on what is the desired outcome.
+3. JSX is similar to template literal but focused on defining and describing the structure and behavior of the user interface in a declarative and readable way.
+4. The purpose of babel is to enable developers to write modern, future-proof JavaScript code while ensuring compatibility with older environments that do not support the latest JavaScript features.
