@@ -3,7 +3,9 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev --turbopack",
-    "start": "next start"
+    "start": "next start",
+    "prettier": "prettier --write --ignore-unknown",
+    "prettier:check": "prettier --check --ignore-unknown"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
