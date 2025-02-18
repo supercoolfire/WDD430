@@ -4,6 +4,7 @@
     "build": "next build",
     "dev": "next dev --turbopack",
     "start": "next start",
+    "lint": "next lint",
     "prettier": "prettier --write --ignore-unknown",
     "prettier:check": "prettier --check --ignore-unknown"
   },
@@ -29,7 +30,9 @@
     "@types/bcrypt": "^5.0.2",
     "@types/node": "22.10.1",
     "@types/react": "19.0.0",
-    "@types/react-dom": "19.0.0"
+    "@types/react-dom": "19.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "15.1.7"
   },
   "pnpm": {
     "ignoredBuiltDependencies": [
