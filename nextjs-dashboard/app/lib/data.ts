@@ -30,13 +30,8 @@ export async function fetchRevenue() {
 
 export async function fetchLatestInvoices() {
   try {
-
-    console.log('Fetching revenue data...');
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-
-    // Fetch the last 5 invoices, sorted by date
     const data = await sql<LatestInvoiceRaw>`
-      SELECT invoices.amount, customers.name, customers.image_url, customers.email
+      SELECT invoices.amount, customers.name, customers.image_url, customers.email, invoices.id
       FROM invoices
       JOIN customers ON invoices.customer_id = customers.id
       ORDER BY invoices.date DESC
@@ -46,9 +41,6 @@ export async function fetchLatestInvoices() {
       ...invoice,
       amount: formatCurrency(invoice.amount),
     }));
-
-    console.log('Data fetch completed after 2 seconds.');
-
     return latestInvoices;
   } catch (error) {
     console.error('Database Error:', error);
@@ -166,7 +158,6 @@ export async function fetchInvoiceById(id: string) {
       amount: invoice.amount / 100,
     }));
 
-    console.log(invoice); // Invoice is an empty array []
     return invoice[0];
   } catch (error) {
     console.error('Database Error:', error);
