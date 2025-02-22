@@ -4,8 +4,8 @@ import { Suspense } from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Login',
-};
+    title: 'LogIn',
+  };
  
 export default function LoginPage() {
   return (
